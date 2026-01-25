@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Copilot Studio – Luware – Jira Automation | Deepanshu Tyagi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- IMPORTANT: Use the same CSS file name as your home page -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">Deepanshu<span class="dot">•</span></a>
+
+    <nav class="nav">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <a class="btn btn-ghost" href="../index.html#projects">Back</a>
+      <a class="btn btn-primary" href="../index.html#contact">Hire / Connect</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <p class="pill">AI • Copilot Studio • Direct Line</p>
+      <h1>Copilot Studio – Luware – Jira Automation</h1>
+      <p class="subtitle">
+        Enterprise AI Automation Case Study — integrating <strong>Microsoft Copilot Studio</strong> with
+        <strong>Luware Nimbus</strong> via <strong>Direct Line</strong> to automate Jira ticket creation and preserve
+        conversation context.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="../index.html#projects">← Back to Home</a>
+        <a class="btn btn-ghost" href="../assets/Deepanshu Resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Problem</h2>
+        <p class="muted">
+          Enterprise contact center teams were handling high call volumes through Luware Nimbus with no AI assistance and manual Jira
+          ticket creation.
+        </p>
+        <ul class="list">
+          <li>High agent handling time</li>
+          <li>Inconsistent ticket data</li>
+          <li>Loss of conversation context</li>
+          <li>Limited automation and auditability</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>My Role</h2>
+        <p><strong>Solution Architect & Technical Product Owner</strong></p>
+        <p class="muted">Owned end-to-end design and delivery, including:</p>
+        <ul class="list">
+          <li>Overall solution architecture</li>
+          <li>Copilot Studio conversation design</li>
+          <li>Direct Line integration strategy</li>
+          <li>Jira workflow mapping</li>
+          <li>Security, governance, and error handling</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Solution Overview</h2>
+        <p class="muted">
+          Designed and delivered an AI-driven Copilot Studio solution integrated with Luware Nimbus via Direct Line.
+        </p>
+        <p class="muted">The solution enables:</p>
+        <ul class="list">
+          <li>AI-driven conversations with callers</li>
+          <li>Seamless bot-to-agent handover</li>
+          <li>Automated Jira ticket creation with full context</li>
+          <li>Traceability using Conversation ID and caller identifiers</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Architecture Components</h2>
+        <ul class="list">
+          <li><strong>Microsoft Copilot Studio</strong> — Conversational AI</li>
+          <li><strong>Direct Line API</strong> — Real-time message exchange</li>
+          <li><strong>Power Automate</strong> — Workflow orchestration</li>
+          <li><strong>Jira Service Management</strong> — Ticket creation</li>
+          <li><strong>Luware Nimbus</strong> — Contact center platform</li>
+          <li><strong>Microsoft Teams</strong> — Agent handover</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Architecture</h2>
+        <p class="muted">
+          Add an architecture diagram here (recommended). You can create it in PowerPoint / draw.io and export as PNG.
+        </p>
+
+        <!-- Put your image here: /assets/images/copilot-architecture.png -->
+        <img
+          src="../assets/images/copilot-architecture.png"
+          alt="Copilot Architecture"
+          style="max-width:100%; border-radius: 14px; border: 1px solid rgba(255,255,255,.08);"
+        />
+
+        <!-- OPTIONAL: Add more screenshots later -->
+        <!--
+        <div style="height: 12px;"></div>
+        <img src="../assets/images/copilot-chat.png" alt="Copilot Chat UI" style="max-width:100%; border-radius: 14px;">
+        <div style="height: 12px;"></div>
+        <img src="../assets/images/jira-ticket.png" alt="Jira Ticket Created" style="max-width:100%; border-radius: 14px;">
+        -->
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>How the Flow Works</h2>
+        <ol class="list">
+          <li>Caller interacts with Copilot chatbot</li>
+          <li>Copilot identifies intent and gathers context</li>
+          <li>Messages are exchanged via Direct Line</li>
+          <li>Power Automate creates a Jira ticket</li>
+          <li>Conversation ID and AI summary are stored</li>
+          <li>Agent receives ticket with full context</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Challenges & Architectural Decisions</h2>
+
+        <p class="muted"><strong>Challenges</strong></p>
+        <ul class="list">
+          <li>Maintaining conversation context across systems</li>
+          <li>Avoiding duplicate Jira ticket creation</li>
+          <li>Secure handling of authentication tokens</li>
+          <li>Managing conditional handover logic</li>
+        </ul>
+
+        <p class="muted" style="margin-top: 14px;"><strong>Key Decisions</strong></p>
+        <ul class="list">
+          <li>Used Direct Line for real-time control</li>
+          <li>Persisted Conversation ID for traceability</li>
+          <li>Implemented conditional logic in Power Automate</li>
+          <li>Separated AI logic from ticket-creation workflows</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Impact</h2>
+        <ul class="list">
+          <li><strong>70%</strong> reduction in manual ticket creation effort</li>
+          <li>Improved response time and auditability</li>
+          <li>Scalable foundation for future AI enhancements</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Technology Stack</h2>
+        <div class="pillwrap">
+          <span class="chip">Microsoft Copilot Studio</span>
+          <span class="chip">Direct Line API</span>
+          <span class="chip">Power Automate</span>
+          <span class="chip">Luware Nimbus</span>
+          <span class="chip">Jira Service Management</span>
+          <span class="chip">Microsoft Teams</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="footer">
+        <a href="../index.html">← Back to Home</a>
+        <span class="muted">Next: Purchase Requisition Portal →</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

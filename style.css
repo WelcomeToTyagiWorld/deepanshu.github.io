@@ -429,7 +429,9 @@ body:hover #cursor-dot{opacity:1}
 .fact-icon{font-size:22px;margin-bottom:8px}
 .fact-label{font-family:var(--fMono);font-size:10px;color:var(--grey);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
 .fact-val{font-family:var(--fDisplay);font-size:16px;font-weight:700;color:var(--white)}
-.about-right{}
+.about-right{
+  
+}
 .profile-box{
   background:var(--bg3);border:1px solid var(--border);
   border-radius:var(--r2);overflow:hidden;

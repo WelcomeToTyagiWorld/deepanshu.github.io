@@ -82,7 +82,7 @@ themeBtn.addEventListener('click',()=>{dark=!dark;localStorage.setItem('theme',d
 /* ════════════════════════════════
    TYPEWRITER
 ════════════════════════════════ */
-const words=['Solution Architect','Copilot Engineer','Power Platform Lead','SPFx Developer','M365 Strategist'];
+const words=['Solution Architect','Copilot Engineer','Power Platform Lead','SPFx Developer Lead','M365 Strategist'];
 let wi=0,ci=0,del=false;
 const tw=document.getElementById('typewriter');
 function type(){

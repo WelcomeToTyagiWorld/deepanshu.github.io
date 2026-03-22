@@ -105,12 +105,14 @@ document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
    COUNTER ANIMATION
 ════════════════════════════════ */
 function animCount(el,to,dur=1800){
+  const decimals = (String(to).split('.')[1] || '').length;
   let s=null;
   (function step(ts){
     if(!s)s=ts;
     const p=Math.min((ts-s)/dur,1);
     const e=1-Math.pow(1-p,3);
-    el.textContent=Math.floor(e*to);
+    const value=e*to;
+    el.textContent=decimals ? value.toFixed(decimals) : Math.floor(value);
     if(p<1)requestAnimationFrame(step);
     else el.textContent=to;
   })(performance.now());
@@ -118,7 +120,7 @@ function animCount(el,to,dur=1800){
 const cntObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
-      animCount(e.target,parseInt(e.target.dataset.target));
+      animCount(e.target,parseFloat(e.target.dataset.target));
       cntObs.unobserve(e.target);
     }
   });
@@ -201,18 +203,16 @@ function showToast(msg,type='success'){
 /* ════════════════════════════════
    CONTACT FORM
 ════════════════════════════════ */
-document.getElementById('contact-form').addEventListener('submit',function(e){
-  e.preventDefault();
+document.getElementById('contact-form').addEventListener('submit',function(){
   const name=document.getElementById('fname').value.trim();
   const email=document.getElementById('femail').value.trim();
   const subject=document.getElementById('fsubject').value.trim();
   const msg=document.getElementById('fmsg').value.trim();
-  if(!name||!email||!subject||!msg){showToast('Please fill in all fields.','error');return}
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showToast('Please enter a valid email.','error');return}
+  if(!name||!email||!subject||!msg){return}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){return}
   const btn=document.getElementById('submit-btn');
   btn.textContent='Sending...';btn.classList.add('loading');btn.disabled=true;
-  const mailto=`mailto:deepanshut34@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+msg)}`;
-  window.location.href=mailto;
+  return;
   setTimeout(()=>{
     btn.textContent='Send Message →';btn.classList.remove('loading');btn.disabled=false;
     document.getElementById('contact-form').reset();
